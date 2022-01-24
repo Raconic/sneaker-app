@@ -1,9 +1,18 @@
 <%- include('../partials/header') %>
+<main>
+<h1>NEW SNEAKER</h1>
+<form action="/sneakers" method="POST"> </form>
+    <label>Brand:</label>
+    <input type="text" name="brandName">
+    <label>Model:</label>
+    <input type="text" name="modelName">
+    <label>Colorway:</label>
+    <input type="text" name="colorWay">
+    <label>Release Year:</label>
+    <input type="text" name="releaseYear">
 
-<h1>New Sneaker</h1>
-<form action="/sneakers" method="POST" autocomplete="off"></form>
-    <input type="text" name="collection">
+    
     <button type="submit">Save Sneaker</button>
 </form>
-
+</main>
 <%- include('../partials/footer') %>

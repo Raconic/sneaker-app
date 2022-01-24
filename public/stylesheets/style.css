@@ -12,7 +12,6 @@ body > nav {
   grid-area: nav;
   background-color: #000000;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   padding: 0 20px 0 30px;
 }
@@ -23,18 +22,10 @@ nav > img {
   margin-right: auto;
 }
 
-body > main {
-  grid-area: main;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #E8ECEB;
-  padding: 20px;
-  overflow-y: scroll;
-}
 
-body > main h1:first-child {
-  margin-bottom: 50px;
+
+nav > h1 {
+  color: white;
 }
 
 nav > a {
@@ -109,4 +100,13 @@ li {
 .review-user img {
   border-radius: 50%;
   height: 40px;
+}
+
+
+main {
+  display: grid;
+  grid-template-columns: min-content;
+  justify-content: center;
+  grid-gap: .5rem;
+  margin-bottom: 3rem; 
 }
