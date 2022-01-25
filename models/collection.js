@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 // shortcut variable
 const Schema = mongoose.Schema;
 
-const sneakerSchema = new Schema({
+const collectionSchema = new Schema({
   brandName: {
     type: String,
     required: true
@@ -10,4 +10,4 @@ const sneakerSchema = new Schema({
 })
   
 
-  module.exports=mongoose.model('Sneaker', sneakerSchema)
+  module.exports=mongoose.model('Collection', collectionSchema)

@@ -13,6 +13,7 @@ require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var sneakersRouter = require('./routes/sneakers');
+var collectionsRouter = require('./routes/collections');
 
 var app = express();
 
@@ -45,6 +46,7 @@ app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/sneakers', sneakersRouter);
+app.use('/collections', collectionsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

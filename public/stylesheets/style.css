@@ -36,7 +36,7 @@ nav > a {
 }
 
 a {
-  color: #00B7FF;
+  color: #ffe600;
 }
 
 
@@ -51,24 +51,6 @@ a {
   height: 30px;
 }
 
-#badge-container {
-  display: flex;
-  flex-wrap: wrap;
-  /* padding: 1rem; */
-  width: 80%;
-  border: 2px solid #B8C0C2;
-  border-radius: .5rem;
-  margin: .5rem 0 2rem;
-}
-
-.badge {
-  background-color: #B8C0C2;
-  padding: .5rem;
-  margin: .5rem;
-  border-radius: .3rem;
-  font-size: .8rem;
-  text-align: center;
-}
 
 ul {
   margin: 0 0 1rem;
@@ -102,11 +84,15 @@ li {
   height: 40px;
 }
 
-
-main {
+#sneaker-info{
   display: grid;
-  grid-template-columns: min-content;
-  justify-content: center;
-  grid-gap: .5rem;
-  margin-bottom: 3rem; 
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, minmax(auto, 22rem));
+}
+
+
+#sneaker-info input[type="submit"] {
+  grid-column: span 2;
+  width: 10rem;
+  margin-left: auto;
 }

@@ -1,7 +1,6 @@
 <%- include('../partials/header') %>
-<main>
-<h1>NEW SNEAKER</h1>
-<form action="/sneakers" method="POST"> </form>
+
+<form id="sneaker-info" action="/sneakers" method="POST"> </form>
     <label>Brand:</label>
     <input type="text" name="brandName">
     <label>Model:</label>
@@ -14,5 +13,5 @@
     
     <button type="submit">Save Sneaker</button>
 </form>
-</main>
+
 <%- include('../partials/footer') %>

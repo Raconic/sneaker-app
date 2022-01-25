@@ -6,7 +6,9 @@ const sneakersCtrl = require('../controllers/sneakers');
 router.get('/', sneakersCtrl.index);
 // GET /collections/new
 router.get('/new', sneakersCtrl.new);
-// POST /collections
-router.post('/sneakers', sneakersCtrl.create);
+// POST /sneakers
+router.post('/', sneakersCtrl.create);
 
-module.exports=router;
+router.get('/:id', sneakersCtrl.show);
+
+module.exports = router;
