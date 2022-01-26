@@ -1,0 +1,19 @@
+<%- include('../partials/header') %>
+
+<div>Sneakers: </div>
+  <ul>
+    <%- collection.sneaker.map(s => 
+      `<li>${s.image} <small>${s.modelName.toLocaleDateString()}</small></li>`
+    ).join('') %>
+  </ul>
+
+<form id="add-sneaker" action="/collections/<%= collection._id %>/sneakers" method="POST">
+    <select name="sneakerId">
+      <%- sneakers.map(s => 
+        `<option value="${s._id}">${s.image}</option>`
+      ).join('') %>
+    </select>
+    <button type="submit">Add to Sneakers</button>
+  </form>
+
+<%- include('../partials/footer') %>

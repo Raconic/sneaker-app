@@ -1,11 +1,10 @@
 <%- include('../partials/header') %>
-<h1>collections</h1>
+<h1>ALL COLLECTIONS</h1>
     <ul>
-        <% collections.forEach(function(s) { %>
+        <% collections.forEach(function(c) { %>
             <li>
-                <a href="/collections/<%= c.id %>">    
-                </a>
-
+                <%= c.collectionName %>
+                <a href="/collections/<%= c.id %>"> DETAILS</a>
             </li>
             <% }); %>
     </ul>
