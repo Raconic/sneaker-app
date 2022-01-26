@@ -22,10 +22,10 @@ nav > img {
   margin-right: auto;
 }
 
-
-
-nav > h1 {
-  color: white;
+nav > a > img {
+  width: 50px;
+  object-fit: contain;
+  margin-right: auto;
 }
 
 nav > a {
@@ -36,7 +36,7 @@ nav > a {
 }
 
 a {
-  color: #ffe600;
+  color: #ffffff;
 }
 
 
