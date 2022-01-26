@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<form id="sneaker-info" action="/allSneakers" method="POST"> 
+<form id="sneaker-info" action="/sneakers" method="POST"> 
     <label>Brand:</label>
     <input type="text" name="brandName">
     <label>Model:</label>
@@ -9,9 +9,9 @@
     <input type="text" name="colorWay">
     <label>Release Year:</label>
     <input type="text" name="releaseYear">
+    <label>Image URL:</label>
     <input type="text" name="image">
     <input type="submit" value="Add Sneaker">
-    
 </form>
 
 <%- include('../partials/footer') %>

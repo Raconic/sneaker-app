@@ -10,7 +10,7 @@ module.exports = {
 function show(req, res) {
     Sneaker.findById(req.params.id, function (err, sneaker){
         console.log(sneaker)
-        res.render('allSneakers/show', {sneaker})
+        res.render('sneakers/show', {sneaker})
     })
 }
 
@@ -18,7 +18,7 @@ function index(req, res) {
     Sneaker.find({})
       .then(function (sneakers) {
           console.log('sneakers', sneakers)
-        res.render('allSneakers/index', {sneakers});
+        res.render('sneakers/index', {sneakers});
       })
       .catch(function (err) {
           console.log(err)

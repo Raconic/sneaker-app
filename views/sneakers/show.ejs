@@ -1,7 +1,12 @@
-<!-- <%- include('../partials/header') %>
+<%- include('../partials/header') %>
 
-    <h1>Sneaker #<%= sneaker.id %></h1>
-    <h3><%= sneaker.brandName %></h3>
+<h1><%= sneaker.modelName %></h1>
+<li><%= sneaker.brandName %></li>
+<li><%= sneaker.colorWay %></li>
+<li><%= sneaker.releaseYear %></li>
+<li>Sneaker #<%= sneaker.id %></li>
 
+    <img class="sneaker-image" src="<%= sneaker.image %>" alt="sneaker" width="250" height="250"></img>
+    
 
-    <%- include('../partials/footer') %> -->
+ <%- include('../partials/footer') %>

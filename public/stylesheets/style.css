@@ -1,14 +1,14 @@
-body {
-  margin: 0;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 50px 1fr;
-  grid-template-areas: 
-    "nav"
-    "main"
+html {
+  height: 100%;
 }
 
-body > nav {
+body {
+  margin: 0;
+  height: 100%;
+  
+}
+
+ nav {
   grid-area: nav;
   background-color: #000000;
   display: flex;
@@ -73,29 +73,28 @@ li {
   height: 34px;
 }
 
-.login img {
-  height: 30px;
-}
-
-.review-user {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.review-user img {
-  border-radius: 50%;
-  height: 40px;
-}
 
 #sneaker-info{
+  margin-top: 20px;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(2, minmax(auto, 22rem));
 }
 
-
 #sneaker-info input[type="submit"] {
+  grid-column: span 2;
+  width: 10rem;
+  margin-left: auto;
+}
+
+#collection{
+  margin-top: 20px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, minmax(auto, 22rem));
+}
+
+#collection input[type="submit"] {
   grid-column: span 2;
   width: 10rem;
   margin-left: auto;

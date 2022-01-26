@@ -4,9 +4,10 @@
         <% sneakers.forEach(function(s) { %>
             <li>
                 <a href="/sneakers/<%= s.id %>">
+                <img class="sneaker-image" src="<%= s.image %>" alt="sneaker" width="125" height="125"></img>
                     <%= s.brandName %>
                     <%= s.modelName %>
-                
+                    
                 </a>
 
             </li>
