@@ -20,16 +20,19 @@ function index(req, res) {
 
 
 function newSneaker (req, res) {
-    res.render('sneakers/new', );
+    res.render('sneakers/new', { title: 'Add Sneaker'});
   }
 
   function create(req, res) {
-    const sneaker = new sneaker(req.body);
-    // Assign the logged in user's id
-    sneaker.userRecommending = req.user._id;
-    sneaker.save(function(err) {
-      if (err) return render();
-      // Probably want to go to newly added book's show view
-      res.redirect(`/sneakers/${sneaker._id}`);
+    const sneaker = new Sneaker(req.body);
+    console.log(sneaker)
+    req.body.user = req.user._id;
+      req.body.userName = req.user.name;
+      req.body.userAvatar = req.user.avatar;
+    sneaker.save(function (err) {
+        if (err) return res.render("sneakers/new");
+        res.redirect("/sneakers");
     });
-  }
+}
+
+     

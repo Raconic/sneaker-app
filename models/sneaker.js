@@ -3,10 +3,24 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const sneakerSchema = new Schema({
-  brandName: {
+  title: {
     type: String,
     required: true
   },
+  releaseYear: {
+    type: Number,
+    default: function() {
+      return new Date().getFullYear()
+    },
+    min: 1927
+  },
+  model: {
+    type: String,
+  },
+  colorWay: {
+    type: String,
+  }
+
 })
   
 
