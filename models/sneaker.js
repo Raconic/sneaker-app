@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const sneakerSchema = new Schema({
-  title: {
+  brandName: {
     type: String,
     required: true
   },
@@ -14,10 +14,13 @@ const sneakerSchema = new Schema({
     },
     min: 1927
   },
-  model: {
+  modelName: {
     type: String,
   },
   colorWay: {
+    type: String,
+  },
+  image: {
     type: String,
   }
 

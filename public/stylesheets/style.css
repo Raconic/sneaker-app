@@ -35,8 +35,12 @@ nav > a {
   border-radius: 5px;
 }
 
+nav > a {
+  color: white;
+}
+
 a {
-  color: #ffffff;
+  color: #000000;
 }
 
 
