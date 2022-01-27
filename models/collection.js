@@ -11,6 +11,11 @@ const collectionSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Sneaker'
   }],
+  user: { 
+    type: Schema.Types.ObjectId, ref: 'User'
+  },
+},{
+  timestamps: true
 })
   
 

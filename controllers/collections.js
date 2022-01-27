@@ -1,13 +1,26 @@
 const Collection = require('../models/collection');
+const sneaker = require('../models/sneaker');
 const Sneaker = require('../models/sneaker');
 module.exports = {
   new: newCollection,
   create,
   index,
   show,
+  addToCollection
 };
 
-
+function addToCollection(req, res) {
+  Collection.findById(req.params.collectionId, function(err, collection) {
+    console.log('collection', collection)
+    Sneaker.findById(req.body.sneakerId, function(err, sneaker){
+      console.log('sneaker', sneaker)
+      collection.sneaker.push(sneaker)
+      collection.save(function(err) {
+        res.redirect(`/collections/${collection._id}`);
+    })
+    });
+  });
+}
 
 function show(req, res) {
   Collection.findById(req.params.id)
