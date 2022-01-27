@@ -7,6 +7,10 @@ const collectionSchema = new Schema({
     type: String,
     required: true
   },
+  sneaker: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Sneaker'
+  }],
 })
   
 

@@ -11,4 +11,6 @@ router.post('/', sneakersCtrl.create);
 
 router.get('/:id', sneakersCtrl.show);
 
+router.post('/collection/:id/sneakers', sneakersCtrl.addToCollection);
+
 module.exports = router;

@@ -1,17 +1,27 @@
 const Collection = require('../models/collection');
-
+const Sneaker = require('../models/sneaker');
 module.exports = {
   new: newCollection,
   create,
   index,
-  show
+  show,
 };
 
+
+
 function show(req, res) {
-    Collection.findById(req.params.id, function (err, collection){
-        console.log(collection)
-        res.render('collection/show', {collection})
-    })
+  Collection.findById(req.params.id)
+    .populate('sneaker').exec(function(err, collection) {
+      Sneaker.find(
+        {_id: {$nin: collection.Sneaker}},
+        function(err, sneakers) {
+          console.log(sneakers);
+          res.render('collections/show', {
+            collection, sneakers
+          });
+        }
+      );
+    });
 }
 
 function index(req, res) {
