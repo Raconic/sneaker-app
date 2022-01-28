@@ -140,14 +140,10 @@ small {
   margin-bottom: 2rem;
 }
 
-#welcome {
-  background-color:black ;
-}
-
 #feed {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   padding: 5px;
 }

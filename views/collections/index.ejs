@@ -3,10 +3,10 @@
 <table id="feed">
     <tbody>
         <% collections.forEach(function(c) { %>
-            <%= c.collectionName %>
-            <td> By: <img alt="avatar" src="<%= c.userAvatar %>"> <%= c.userName %></td>
+            <td><%= c.collectionName %></td>
             <td><a href="/collections/<%= c.id %>"> DETAILS</a></td> 
-            <% }); %>
-    </tbody>
+            <td> By: <img alt="avatar" src="<%= c.userAvatar %>" width="50" height="50"> <%= c.userName %></td>
+        </tbody>
+        <% }); %>
 </table>
 <%- include('../partials/footer') %>
