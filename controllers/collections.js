@@ -1,5 +1,4 @@
 const Collection = require('../models/collection');
-const sneaker = require('../models/sneaker');
 const Sneaker = require('../models/sneaker');
 module.exports = {
   new: newCollection,
@@ -55,9 +54,9 @@ function newCollection (req, res) {
   }
 
   function create(req, res) {
-      req.body.user = req.user._id;
-        req.body.userName = req.user.name;
-        req.body.userAvatar = req.user.avatar;
+    req.body.user = req.user._id;
+    req.body.userName = req.user.name;
+    req.body.userAvatar = req.user.avatar;
      const collection = new Collection(req.body);
      console.log(collection)
      collection.save(function (err) {

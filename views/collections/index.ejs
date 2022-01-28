@@ -1,13 +1,12 @@
 <%- include('../partials/header') %>
-
 <h1>ALL COLLECTIONS</h1>
-    <ul>
+<table id="feed">
+    <tbody>
         <% collections.forEach(function(c) { %>
-            <li>
-                <%= c.collectionName %>
-                <a href="/collections/<%= c.id %>"> DETAILS</a>
-            </li>
+            <%= c.collectionName %>
+            <td> By: <img alt="avatar" src="<%= c.userAvatar %>"> <%= c.userName %></td>
+            <td><a href="/collections/<%= c.id %>"> DETAILS</a></td> 
             <% }); %>
-    </ul>
-
+    </tbody>
+</table>
 <%- include('../partials/footer') %>

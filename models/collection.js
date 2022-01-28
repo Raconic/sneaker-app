@@ -29,7 +29,10 @@ const collectionSchema = new Schema({
   user: { 
     type: Schema.Types.ObjectId, ref: 'User'
   },
-  comments: [commentSchema]
+  comments: [commentSchema],
+  userId: { type: Schema.Types.ObjectId, ref: 'User' },
+  userName: String,
+  userAvatar: String,
 },{
   timestamps: true
 },)

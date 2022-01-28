@@ -1,5 +1,4 @@
 const express = require('express');
-const sneakers = require('../controllers/sneakers');
 const router = express.Router();
 const sneakersCtrl = require('../controllers/sneakers');
 
