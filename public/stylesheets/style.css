@@ -99,6 +99,14 @@ li {
   grid-column: span 2;
   width: 10rem;
   margin-left: auto;
+  font-size: medium;
+
+}
+
+#add-sneaker {
+  background-color: rgb(179, 179, 179);
+  border-radius: 2vmin;
+  padding: 5px
 }
 
 #collection{
@@ -106,12 +114,14 @@ li {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(2, minmax(auto, 22rem));
+  font-size: large;
 }
 
 #collection input[type="submit"] {
   grid-column: span 2;
   width: 10rem;
   margin-left: auto;
+  font-size: medium;
 }
 
 small {
@@ -139,6 +149,9 @@ small {
   grid-template-columns: auto auto;
   grid-gap: 1rem;
   margin-bottom: 2rem;
+  background-color: rgb(179, 179, 179);
+  border-radius: 2vmin;
+  padding: 5px
 }
 
 #feed {
@@ -147,5 +160,23 @@ small {
   justify-content: center;
   align-items: center;
   padding: 5px;
+  font-size: x-large;
+  border-radius: 2vmin;
 }
 
+li {
+  font-size: larger;
+}
+
+label {
+  font-size: larger;
+}
+
+a:hover {
+  color: rgb(116, 116, 116);
+}
+
+table {
+  background-color: rgb(179, 179, 179);
+  border-radius: 2vmin;
+}

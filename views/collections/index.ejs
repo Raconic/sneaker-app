@@ -5,7 +5,7 @@
         <% collections.forEach(function(c) { %>
             <td><%= c.collectionName %></td>
             <td><a href="/collections/<%= c.id %>"> DETAILS</a></td> 
-            <td> By: <img alt="avatar" src="<%= c.userAvatar %>" width="50" height="50"> <%= c.userName %></td>
+            <td>By: <img alt="avatar" src="<%= c.userAvatar %>" width="50" height="50"> <%= c.userName %></td>
         </tbody>
         <% }); %>
 </table>
