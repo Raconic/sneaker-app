@@ -15,5 +15,6 @@ Description: The sneakers app is an amazing social platform to share your sneake
 ## Getting Started:
 
 Getting Started: 
-[SNEAKERS APP] (https://sneaker-application.herokuapp.com/)
-https://trello.com/b/Xeps6Zwz/sneaker-app
+SNEAKERS APP: (https://sneaker-application.herokuapp.com/)
+
+TRELLO: https://trello.com/b/Xeps6Zwz/sneaker-app
