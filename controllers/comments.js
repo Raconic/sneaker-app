@@ -7,6 +7,7 @@ module.exports = {
 };
 
 function deleteComment(req, res) {
+    console.log(req.user)
   Collection.findOne(
     {'comments._id': req.params.id, 'comments.user': req.user._id})
     .then(function(collection) {
@@ -15,18 +16,18 @@ function deleteComment(req, res) {
       return collection.save();
     })
     .then(function(collection) {
-      res.redirect(`/collections/${collections._id}`);
+      res.redirect(`/collections/${collection._id}`);
     });
 }
 
 function create(req, res) {
-  Collection.findById(req.params.id, function(err, collection) {
+  Collection.findById(req.params.collectionId, function(err, collection) {
     req.body.user = req.user._id;
     req.body.userName = req.user.name;
     req.body.userAvatar = req.user.avatar;
     collection.comments.push(req.body);
     collection.save(function(err) {
-      res.redirect(`/collections/${collections._id}`);
+      res.redirect(`/collections/${collection._id}`);
     });
   });
 }

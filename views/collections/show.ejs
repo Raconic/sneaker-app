@@ -3,19 +3,20 @@
 <div>Sneakers: </div>
   <ul>
     <% collection.sneaker.map(s => { %>
-      <li> <img src= "<%= s.image %>" width="75" height="75">  <small> <%= s.modelName %></small> </li>
+      <li> <img src= "<%= s.image %>" width="125" height="100">  <small><%= s.brandName %> <%= s.modelName %></small> 
+    </li>
     </ul>
     <% } ) %>
-    
+ <% if (user) { %>
 <form id="add-sneaker" action="/collections/<%= collection._id %>/sneakers" method="POST">
     <select name="sneakerId">
       <% sneakers.map(s =>{ %>
-        <option value="<%= s._id %>"> <%= s.modelName %>, <%= s.colorWay %> </option>
+        <option value="<%= s._id %>"> <%= s.brandName %> <%= s.modelName %> <%= s.colorWay %> </option>
       <% } ).join('')%>
     </select>
     <button type="submit">Add to Sneakers</button>
   </form>
-  
+  <% } %>
   <br><br><h2>Comments</h2>
 <% if (user) { %>
   <form id="add-comment-form" method="POST" action="/collections/<%= collection._id %>/comments">
@@ -47,9 +48,9 @@
     <tbody>
       <% let total = 0 %>
       <% collection.comments.forEach(function(c) { %>
-        <% total += r.rating %>
+        <% total += c.rating %>
         <tr>
-          <td class="comment-user"><img alt="avatar" src="<%= r.userAvatar %>"><%= c.userName %></td>
+          <td class="comment-user"><img alt="avatar" src="<%= c.userAvatar %>"><%= c.userName %></td>
           <td><%= c.createdAt.toLocaleDateString() %></td>
           <td><%= c.content %></td>
           <td><%= c.rating %></td>

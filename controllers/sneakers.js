@@ -9,6 +9,7 @@ module.exports = {
 };
 
 
+
 function show(req, res) {
     Sneaker.findById(req.params.id, function (err, sneaker){
         console.log(sneaker)
@@ -44,5 +45,6 @@ function newSneaker (req, res) {
         res.redirect("/sneakers");
     });
 }
+
 
      

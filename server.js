@@ -49,7 +49,7 @@ app.use(methodOverride('_method'));
 app.use('/', indexRouter);
 app.use('/sneakers', sneakersRouter);
 app.use('/collections', collectionsRouter);
-app.use('/comments', commentsRouter);
+app.use('/', commentsRouter);
 
 
 // catch 404 and forward to error handler
