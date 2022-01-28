@@ -18,3 +18,9 @@ Getting Started:
 SNEAKERS APP: (https://sneaker-application.herokuapp.com/)
 
 TRELLO: https://trello.com/b/Xeps6Zwz/sneaker-app
+
+## ICEBOX (Planned future enhancements)
+* Use a third party sneaker API
+* Ability to delete sneaker from collection in app
+* Ability to delete collection in app
+* Stop Users from adding to other collections
